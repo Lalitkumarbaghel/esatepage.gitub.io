@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indya Speak | Ring Tone</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<%- include ('header') %>
+	<!-- start small slider -->
+		<div class="ringtone_bg_tp">
+			<div class="indya-container">
+				<div class="indya-row">
+					<div class="indya-col-md-12">
+						<h5><span class="rng_tn_anker"><a href="index.php">Home</a></span> <span class="rng_tn_icon"><img src="images/icons/double-left-chevron.svg"></span> Upload a Ringtone</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- end small slider -->
+<!-- start slider -->
+
+<!-- end slider -->
+<!-- start polls content -->
+<div class="indya-container indya_sec_p">
+	<div class="indya-row">
+		<div class="indya-col-md-9">
+			<div class="login_main_box">
+					<div class="logintxt">
+						<!-- <h1 class="h1_heading" style="text-align: center;">Write an Article/ Poem / Joke or anything</h1> -->
+					</div>
+					<div class="loginform pages_post">
+						<% if(messages.error){%>
+							<span style="color: red;"><%=messages.error%></span>	
+						<% }%>
+						<form method="POST" action="/post-ringtone" enctype="multipart/form-data">
+
+							<ul>
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-md-4 indya-col-lg-3">
+											<label>Ringtone Category</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<div class="post_selec">
+											<select name="category">
+                                                <option value="Animal Sounds">Animal Sounds</option>
+                                                <option value="Bengali">Bengali</option>
+                                                <option value="Bhojpuri">Bhojpuri</option>
+                                                <option value="Birds Sounds">Birds Sounds</option>
+                                                <option value="Bollywood">Bollywood</option>
+                                                <option value="Devotional/Bhakti Song">Devotional/Bhakti Song</option>
+                                                <option value="Funny">Funny</option>
+                                                <option value="Hip-hop">Hip-hop</option>
+                                                <option value="Malayalam">Malayalam</option>
+                                                <option value="Marathi">Marathi</option>
+                                                <option value="Music">Music</option>
+                                                <option value="Punjabi">Punjabi</option>
+                                                <option value="Romantic">Romantic</option>
+                                                <option value="Tamil">Tamil</option>
+                                            </select>
+										</div>
+											  
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>	Ringtone Title</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<input type="text" name="title" placeholder="Enter Title" >
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>	Artist / Movie /Album Name</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<input type="text" name="name" placeholder="Enter Artist / Movie /Album Name" >
+										</div>
+									</div>
+								</li>
+								<!-- <li>
+									<div class="indya-row">
+										<div class="indya-col-md-4 indya-col-lg-3">
+											<label>Description</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<textarea cols="" rows="" placeholder="Enter Description"></textarea>
+										</div>
+									</div>
+								</li> -->
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>MP3 file</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+												<input type="file" name="ring" />
+											<!-- <input type="file" name="ring"  style="position: absolute;z-index: 1;height: 100%;cursor: pointer;width: 260px;opacity: 0;"  />
+											<a  class="post_image" href="javascript:void(0)" >
+												<span><img src="images/icons/cloud-computing.svg"></span> <span>Upload Ringtone</span>
+											</a> -->
+										</div>
+									</div>
+								</li>
+								<li class="submit_btn">
+									<div class="indya-row">
+										<div class="indya-col-md-6"></div>
+										<div class="indya-col-md-6">
+											<input type="submit" name="" value="Submit">
+										</div>
+									</div>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			
+		</div><!--end/col-->
+		<div class="indya-col-md-3">
+			<!-- start follow -->
+			<%- include ('right-media')%>
+			<!-- end follow -->
+		</div>
+	</div><!--end/row-->
+</div>
+<!-- end polls content -->
+
+<script type="text/javascript">
+	popFileSelector = function() {
+    var el = document.getElementById("fileElem");
+    if (el) {
+        el.click();  
+    }
+};
+
+window.popRightAway = function() {
+    popFileSelector();
+};
+
+/*window.popWithDelay = function() {
+    window.setTimeout(function() {
+        popFileSelector();
+    }, 1000);
+};*/
+</script>
+
+
+<%- include ('footer') %>

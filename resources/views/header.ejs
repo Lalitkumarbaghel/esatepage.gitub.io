@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indya Speak</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!-- style css -->
+	 <link rel="stylesheet" type="text/css" href="css/style.css">
+	 <link rel="stylesheet" type="text/css" href="css/style2.css">
+	 <!-- google font family -->
+	 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i,800,800i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+   
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+   <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+   <style type="text/css">
+	
+
+	 </style>
+</head>
+<body>
+<!-- start menu -->
+<div class="indya-container-fluid logo_menu">
+<div class="indya-container">
+  <div class="indya-row">
+    <div class="indya-col-md-3">
+      <div class="logo">
+          <a href="/"><img src="images/logo.gif"></a>
+        </div>
+    </div>
+    <div class="indya-col-md-9">
+      <div class="login_box">
+        <ul>
+          <% if(user){ %>
+          <li>
+            <form  action="/logout" id="logout" method="post">
+              <a class="nav-link" onclick="document.getElementById('logout').submit()" style="cursor: pointer;">Logout</a>
+            </form>
+          </li>
+          <li>
+            <a href="/dashboard" ><span><img src="images/icons/user.svg"></span> Dash Board</a>
+          </li>
+          <%}else{%>
+            <li>
+              <a href="/signup" ><span><img src="images/icons/user.svg"></span> Register</a>
+            </li>
+            <li>
+              <a href="/login" ><span><img src="images/icons/user.svg"></span> Login</a>
+            </li>
+            <%}%>
+          <li>
+            <a href="#" id="btm_search_icon"><span><img src="images/icons/search.svg"></span>Search</a>
+          </li>
+
+        </ul>
+         <!-- start home search  -->
+            <div class="search_box2" id="search_box2">
+              <div class="inner_menu">
+                <div class="search_box">
+                  <input type="search" name="" placeholder="Search....">
+                  <button><img src="images/icons/search2.svg"></button>
+                </div>
+              </div>
+            </div>
+            <!-- end home search  -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="navigation">
+  <div class="items-wrapper">
+    <div class="item">
+      <a href="/news" class="item-link"><span><img src="images/icons/news-report2.svg"></span> News</a>
+      <div class="arrow"></div>
+      <div class="submenu-wrapper">
+        <div class="item-submenu">
+          <div class="indya-container">
+            <div class="indya-row">
+              <div class="indya-col-md-12 indya-col-lg-4 col_margin_">
+                <div class="submenu-group">
+                  <a href="#" class="submenu-link">News in Politics</a>
+                  <a href="#" class="submenu-link">Cricket News</a>
+                  <a href="#" class="submenu-link">Sports News</a>
+                  <a href="#" class="submenu-link">Entertainment News</a>
+                  <a href="#" class="submenu-link">Technology News</a>
+                  <a href="#" class="submenu-link">Business News</a>
+                  <a href="#" class="submenu-link">Education News</a>
+                </div>
+              </div><!--end/col-->
+              <div class="indya-col-md-12 col_margin_">
+                <div class="submenu_group_full">
+                  <a href="#" class="menu_bold_head">Latest News</a>
+                  <a href="#">Dukandar Or Mahila</a>
+                  <a href="#">"Deepika marked presence at JNU only a film related publicity stunt": statement marked by the film maker Anurag Kashyap</a>
+                  <a href="#">Chapaak Girl Deepika Padukone Joined the Protest at JNU Campus to Express Her Complete Support with Assaulted Students</a>
+                  <a href="#">Please Don't Make Education Campuses "Battlefield For Politics": Smriti Irani’s Verdict On JNU Attack</a>
+                  <a href="#">Cyrus Mistry’s statement that will not take the seat of chairmanship of Tata Sons</a>
+                  <a href="#">BHU violence: Heads roll as PM Modi speaks to CM Adityanath, committee set up to look into incident</a>
+                  <a href="#">At House Monsoon Session, Sushma seems unaware about the upper house action</a>
+                </div>
+              </div><!--end/col-->
+            </div><!--end/row-->
+          </div> 
+        </div>
+
+      </div><!--end submenu-->
+
+
+    </div>
+    <div class="item">
+      <a href="/news" class="item-link"><span><img src="images/icons/joke.svg"></span> Jokes</a>
+      <div class="arrow"></div>
+      <div class="submenu-wrapper">
+        <div class="item-submenu">
+          <div class="indya-container">
+            <div class="indya-row">
+              <div class="indya-col-md-12 indya-col-lg-4 col_margin_">
+                <div class="submenu-group">
+                <a href="#" class="submenu-link">Husband Wife Jokes</a>
+                <a href="#" class="submenu-link">Political humor Jokes</a>
+                <a href="#" class="submenu-link">Girlfriend-Boyfriend Jokes</a>
+                <a href="#" class="submenu-link">Santa Banta Jokes</a>
+                <a href="#" class="submenu-link">All Time Jokes</a>
+                <a href="#" class="submenu-link">Celebrity Jokes</a>
+                <a href="#" class="submenu-link">Computer & Technology Jokes</a>
+                <a href="#" class="submenu-link">Alia Bhatt Jokes</a>
+                <a href="#" class="submenu-link">Jokes in hindi</a> 
+                <a href="#" class="submenu-link">Jokes of the day</a>
+                <a href="#" class="submenu-link">One Liner Jokes</a>
+                <a href="#" class="submenu-link">Funny Jokes for Kids</a>
+                <a href="#" class="submenu-link">Short Funny jokes</a>
+                <a href="#" class="submenu-link">April Fool Jokes</a>
+                <a href="#" class="submenu-link">Yo Momma Jokes</a>
+                <a href="#" class="submenu-link">Birthday Jokes</a>
+              </div>
+              </div><!--end/col-->
+              <div class="indya-col-md-12 indya-col-lg-8 col_margin_">
+                <div class="submenu_group_full">
+                  <a href="#" class="menu_bold_head">Latest Jokes</a>
+                  <a href="#">Tau-Daroga ka 5000 ka Mamla</a>
+                  <a href="#">I Have Nuts For You</a>
+                  <a href="#">Santa Dudh Lene Gaya</a>
+                  <a href="#">Jewish Man</a>
+                  <a href="#">Boyfriend-Moti Kahi Ki</a>
+                  <a href="#">Hosle Bade Honey Chahiye</a>
+                  <a href="#">Kabhi Gili Na Honey Wali Chiz</a>
+                </div>
+         
+              </div><!--end/col-->
+            </div><!--end/row-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <a href="/news" class="item-link"><span><img src="images/icons/inkwell.svg"></span> Poetry</a>
+      <div class="arrow"></div>
+      <div class="submenu-wrapper">
+        <div class="item-submenu">
+          <div class="indya-container">
+            <div class="indya-row">
+              <div class="indya-col-lg-4 indya-col-md-12 col_margin_">
+                <div class="submenu-group">
+                  <!-- <a href="#" class="submenu-link-master">SUB MASTER</a> -->
+                  <a href="#" class="submenu-link">Poems on life</a>
+                  <a href="#" class="submenu-link">Silly Poems</a>
+                  <a href="#" class="submenu-link">Poems to flirt</a>
+                  <a href="#" class="submenu-link">Patriotic Poems</a>
+                  <a href="#" class="submenu-link">Love Poem</a>
+                  <a href="#" class="submenu-link">Friendship Poems</a>
+                  <a href="#" class="submenu-link">Sad Poems</a>
+                </div>
+              </div><!--end/col-->
+               <div class="indya-col-ld-8 indya-col-md-12 col_margin_">
+                 <div class="submenu_group_jokes">
+                    <a href="#" class="menu_bold_head">Latest Poetry</a>
+                    <a href="#">5'6" jiski height ho...</a>
+                    <a href="#">If Alok Nath was in Dhoom3</a>
+                    <a href="#">Macchar marney se shikari nahi bn jaoge or...</a>
+                    <a href="#">Zindgi ne kiye hain bahut se sitam !</a>
+                    <a href="#">A tribute to school lyf</a>
+                    <a href="#">Papa All Izz Well !!!</a>
+                    <a href="#">Tumhari adaao pe main wari wari... Network me aa awaaj nai aa rhi</a>
+                  </div>
+              </div><!--end/col-->
+            </div><!--end/row-->
+          </div>
+          
+           <!-- jokes lastest poetry -->
+         
+          <!--  -->
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <a href="/news" class="item-link"><span><img src="images/icons/news.svg"></span> Articles </a>
+      <div class="arrow"></div>
+      <div class="submenu-wrapper">
+        <div class="item-submenu">
+          <div class="indya-container">
+            <div class="indya-row">
+              <div class="indya-col-lg-4 indya-col-md-12 col_margin_">
+                <div class="submenu-group">
+                  <a href="#" class="submenu-link">Social National Issues</a>
+                  <a href="#" class="submenu-link">Political</a>
+                  <a href="#" class="submenu-link">Cultural</a>
+                  <a href="#" class="submenu-link">Historical</a>
+                  <a href="#" class="submenu-link">Patriotic Articles</a>
+                  <a href="#" class="submenu-link">Business</a>
+                  <a href="#" class="submenu-link">Romance</a>
+                  <a href="#" class="submenu-link">Health</a>
+                </div>
+              </div><!--end/col-->
+              <div class="indya-col-lg-8 indya-col-md-12 col_margin_">
+                 <div class="submenu_group_jokes">
+                  <a href="#" class="menu_bold_head">Latest Articles</a>
+                  <a href="#">How Life Changes...</a>
+                  <a href="#">Being different</a>
+                  <a href="#">Three-year-old Rishikesh’s life was rudely cut short due to an Open Manhole in   Mira Bhayandar</a>
+                  <a href="#">26/11 memories have faded the anger has perished...Why?</a>
+                  <a href="#">Datawind Unveils Handheld Internet Device in India</a>
+                  <a href="#">The leader</a>
+                  <a href="#">The effect of leadership in management changes</a>
+                </div>
+              </div><!--end/col-->
+            </div><!--end/row-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <a href="/news" class="item-link"><span><img src="images/icons/question.svg"></span> Forums</a>
+      <div class="arrow"></div>
+      <div class="submenu-wrapper">
+        <div class="item-submenu">
+          <div class="indya-container">
+            <div class="indya-row">
+              <div class="indya-col-lg-4 indya-col-md-12 col_margin_">
+                <div class="submenu-group">
+                  <a href="#" class="submenu-link">Php Forum</a>
+                  <a href="#" class="submenu-link">Java</a>
+                  <a href="#" class="submenu-link">C++</a>
+                  <a href="#" class="submenu-link">J2ME</a>
+                  <a href="#" class="submenu-link">.NET</a>
+                  <a href="#" class="submenu-link">SAP</a>
+                  <a href="#" class="submenu-link">C</a>
+                  <a href="#" class="submenu-link">Oracle</a>
+                </div>
+              </div><!--end/col-->
+              <div class="indya-col-lg-8 indya-col-md-12 col_margin_">
+                 <div class="submenu_group_jokes">
+                  <a href="#" class="menu_bold_head">Latest Forums</a>
+                  <a href="#">Multidimensional Array into an Html table, help!</a>
+                  <a href="#">code help - pagination</a>
+                  <a href="#">php form help</a>
+                  <a href="#">Class not found error</a>
+                  <a href="#">Text Not Displaying Correctly With PHP:GD</a>
+                  <a href="#">Upload Images not WORKING!</a>
+                  <a href="#">please help</a>
+                </div>
+              </div><!--end/col-->
+            </div><!--end/row-->
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="item">
+      <a href="/news" class="item-link"><span><img src="images/icons/window.svg"></span> Wallpapers</a>
+    </div>
+    <div class="item">
+      <a href="ringtone" class="item-link"><span><img src="images/icons/bell.svg"></span> Ringtones</a>
+      <div class="arrow"></div>
+      <div class="submenu-wrapper">
+        <div class="item-submenu">
+          <div class="indya-container">
+            <div class="indya-row">
+              <div class="indya-col-xl-3 indya-col-lg-6 col_margin_">
+                <div class="submenu-group">
+                  <a href="#" class="submenu-link">Funny Ringtones</a>
+                  <a href="#" class="submenu-link">Bollywood Ringtones</a>
+                  <a href="#" class="submenu-link">Hip-hop Ringtones</a>
+                  <a href="#" class="submenu-link">Animal Sounds Ringtones</a>
+                </div>
+              </div><!--end/col-->
+              <div class="indya-col-xl-3 indya-col-lg-6 col_margin_">
+                 <div class="submenu-group">
+                  <a href="#" class="submenu-link">Birds Sounds Ringtones</a>
+                  <a href="#" class="submenu-link">Punjabi Ringtones</a>
+                  <a href="#" class="submenu-link">Romantic Ringtones</a>
+                  <a href="#" class="submenu-link">Tamil Ringtones</a>
+                </div>
+              </div><!--end/col-->
+              <div class="indya-col-xl-3 indya-col-lg-6 col_margin_">
+                 <div class="submenu-group">
+                  <a href="#" class="submenu-link">Marathi Ringtones</a>
+                  <a href="#" class="submenu-link">Bhojpuri Ringtones</a>
+                  <a href="#" class="submenu-link">Malayalam Ringtones</a>
+                </div>
+              </div><!--end/col-->
+              <div class="indya-col-xl-3 indya-col-lg-6 col_margin_">
+                 <div class="submenu-group">
+                  <a href="#" class="submenu-link">Devotional/Bhakti Song Ringtones</a>
+                  <a href="#" class="submenu-link">Music Ringtones</a>
+                  <a href="#" class="submenu-link">Bengali Ringtones</a>
+                </div>
+              </div><!--end/col-->
+            </div><!--end/row-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <a href="/news" class="item-link"><span><img src="images/icons/car.svg"></span> Cars</a>
+    </div>
+    <div class="item">
+      <a href="#" class="item-link"><span><img src="images/icons/open-menu2.svg"></span> More</a>
+      <div class="arrow"></div>
+      <div class="submenu-wrapper">
+        <div class="item-submenu">
+          <div class="indya-container">
+            <div class="indya-row">
+              <div class="indya-col-lg-4 indya-col-md-6 col_margin_">
+                <div class="submenu_group_jokes">
+                  <a href="#" class="submenu-link menu_bold_head">Fake News</a>
+                  <a href="#" class="submenu-link">Bollywood Fake News</a>
+                  <a href="#" class="submenu-link">Hollywood Fake News</a>
+                  <a href="#" class="submenu-link">Cricket Fake News</a>
+                  <a href="#" class="submenu-link">Political Fake News</a>
+                </div>
+              </div><!--end/col-->
+              <div class="indya-col-lg-4 indya-col-md-6 col_margin_">
+                 <div class="submenu_group_jokes">
+                  <a href="#" class="menu_bold_head">Coupons</a>
+                  <a href="#">Online Shopping Coupons</a>
+                  <a href="#">Food Ordering Coupons</a>
+                  <a href="#">Mobile Recharge Coupons</a>
+                  <a href="#">Travel Coupons</a>
+                </div>
+              </div><!--end/col-->
+            </div><!--end/row-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

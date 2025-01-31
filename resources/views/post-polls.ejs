@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indya Speak | Ring Tone</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<%- include ('header') %>
+	<!-- start small slider -->
+		<div class="ringtone_bg_tp">
+			<div class="indya-container">
+				<div class="indya-row">
+					<div class="indya-col-md-12">
+						<h5><span class="rng_tn_anker"><a href="index">Home</a></span> <span class="rng_tn_icon"><img src="images/icons/double-left-chevron.svg"></span> Start a new poll</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- end small slider -->
+<!-- start slider -->
+
+<!-- end slider -->
+<!-- start polls content -->
+<div class="indya-container indya_sec_p">
+	<div class="indya-row">
+		<div class="indya-col-md-9">
+			<div class="login_main_box">
+					<div class="logintxt">
+						<!-- <h1 class="h1_heading" style="text-align: center;">Write an Article/ Poem / Joke or anything</h1> -->
+					</div>
+					<div class="loginform pages_post">
+						<% if(messages.error){%>
+							<span style="color: red;"><%=messages.error%></span>	
+						<% }%>
+						<form method="POST" action="/post-polls">
+
+							<ul>
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>	Question</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<input type="text" name="question" placeholder="Enter Question" >
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>	Options A</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<input type="text" name="optionA" placeholder="Options A" >
+										</div>
+									</div>
+								</li>
+								<li class="add_polls_buttons">
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>	Options B</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<input type="text" name="optionB" placeholder="Options B" >
+											<!-- <button class="polls_add_btns"><i class="fas fa-plus"></i></button> -->
+										</div>
+									</div>
+								</li>
+								<li class="add_polls_buttons">
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>	Options C</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<input type="text" name="optionC" placeholder="Options C" >
+											<!-- <button class="polls_add_btns"><i class="fas fa-plus"></i></button> -->
+										</div>
+									</div>
+								</li>
+								<li class="add_polls_buttons">
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>	Options D</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<input type="text" name="optionD" placeholder="Options D" >
+											<!-- <button class="polls_add_btns"><i class="fas fa-plus"></i></button> -->
+										</div>
+									</div>
+								</li>
+								<li class="submit_btn">
+									<div class="indya-row">
+										<div class="indya-col-md-6"></div>
+										<div class="indya-col-md-6">
+											<input type="submit" name="" value="Start A New Polls">
+										</div>
+									</div>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			
+		</div><!--end/col-->
+		<div class="indya-col-md-3">
+			<!-- start follow -->
+			 <%- include('usefull-links') %>
+			<%- include ('right-media')%>
+			<!-- end follow -->
+		</div>
+	</div><!--end/row-->
+</div>
+<!-- end polls content -->
+
+<script type="text/javascript">
+	const divname = document.getElementsByClassName('polls_add_btns')[0]
+	function addAllInputs(divName, inputType){
+     var newdiv = document.createElement('input');
+     newdiv.type = "text"
+     document.getElementById(divName).appendChild(newdiv);
+		console.log(document.getElementById(divName).appendChild(newdiv))
+	}
+//divname.addEventListener('click')
+</script>
+
+<%- include ('footer')%>

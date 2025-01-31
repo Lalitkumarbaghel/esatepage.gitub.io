@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indya Speak | Ring Tone</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<%- include ('header') %>
+	<!-- start small slider -->
+		<div class="ringtone_bg_tp">
+			<div class="indya-container">
+				<div class="indya-row">
+					<div class="indya-col-md-12">
+						<h5><span class="rng_tn_anker"><a href="index">Home</a></span> <span class="rng_tn_icon"><img src="images/icons/double-left-chevron.svg"></span> Write an Article/ Poem / Joke or anything</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- end small slider -->
+<!-- start slider -->
+
+<!-- end slider -->
+<!-- start polls content -->
+<div class="indya-container indya_sec_p">
+	<div class="indya-row">
+		<div class="indya-col-md-9">
+			<div class="login_main_box">
+					<div class="logintxt">
+						<!-- <h1 class="h1_heading" style="text-align: center;">Write an Article/ Poem / Joke or anything</h1> -->
+					</div>
+					<div class="loginform pages_post">
+						<% if(messages.error){%>
+							<span style="color: red;"><%=messages.error%></span>	
+						<% }%>
+						<form method="POST" action="/news-post">
+
+							<ul>
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-md-4 indya-col-lg-3">
+											<label>Writing News</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<label for="favcity">
+											    <select name="NewsType" onchange="showDiv(DIvs, this)">
+											      <option value="0" selected>Select a News</option>
+												  <option value="1" >News</option>
+												  <option value="2" >Jokes</option>
+												  <option value="3" >Poetry</option>
+												  <option value="4" >Articles</option>
+												  <option value="5" >Forums</option>
+												  <option value="6" >Fake News</option>
+												  <option value="7" >Coupons</option>
+											    </select>
+											  </label>
+										</div>
+									</div>
+								</li>
+
+
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-md-4 indya-col-lg-3">
+											<label>Writing Category</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<div class="selectDiv" style="display: block;">
+												<label for="favcity">
+													<select  name="category">
+													  <option selected>Select a category</option>
+													</select>
+												  </label>
+											</div>
+											<div class="selectDiv">
+												<label for="favcity">
+													<select  name="category">
+													  <option selected>Select a category</option>
+													  	<option value="News in Politics">News in Politics</option><option>Cricket News</option><option>Sports News</option>
+														<option>Entertainment News</option><option>Technology News</option><option>Business News</option><option>Education News</option>   
+													</select>
+												  </label>
+											</div>
+
+											<div class="selectDiv">
+												<label for="favcity">
+													<select  name="category">
+													  <option selected>Select a category</option>
+													  	<option>Husband Wife Jokes</option><option>Political humor</option><option>Girlfriend-Boyfriend</option>
+														<option>Santa Banta</option><option>All time jokes</option><option>Celebrity jokes</option><option>Computer &amp; Technology</option>
+														<option>Alia Bhatt Jokes</option><option>Jokes in hindi</option><option>Jokes of the day</option><option>One Liner Jokes</option><option>Funny Jokes for kids</option><option>Short Funny Jokes</option><option>April Fool Jokes</option><option>Yo Momma Jokes</option><option>Birthday Jokes</option>
+													</select>
+												  </label>
+											</div>
+
+											<div class="selectDiv">
+												<label for="favcity">
+													<select  name="category">
+													  <option selected>Select a category</option><option>Poems on life</option><option>Silly Poems</option><option>Poems to flirt</option>
+														<option>Patriotic Poems</option><option>Love Poems</option><option>Friendship Poems</option><option>Sad Poems</option>
+													</select>
+												  </label>
+											</div>
+
+											<div class="selectDiv">
+												<label for="favcity">
+													<select  name="category">
+													  <option selected>Select a category</option><option>Social</option><option>National Issues</option><option>Political</option><option>Cultural</option><option>Historical</option><option>Patriotic Articles</option>
+														<option>Business</option><option>Romance</option><option>Health</option>
+													</select>
+												  </label>
+											</div>
+
+											<div class="selectDiv">
+												<label for="favcity">
+													<select  name="category">
+													  <option selected>Select a category</option>
+													  	<option>PHP Forum</option><option>Java</option><option>C++</option><option>J2ME</option><option>.Net</option><option>SAP</option><option>C</option><option>Oracle</option>
+													</select>
+												  </label>
+											</div>
+
+											<div class="selectDiv">
+												<label for="favcity">
+													<select  name="category">
+													  <option selected>Select a category</option><option>Bollywood Fake News</option><option>Hollywood Fake News</option><option>Cricket Fake News</option><option>Political Fake News</option></select>
+												  </label>
+											</div>
+
+											<div class="selectDiv">
+												<label for="favcity">
+													<select  name="category">
+													  <option selected>Select a category</option><option>Online Shopping Coupons</option><option>Food Ordering Coupons</option><option>Mobile Recharge Coupons</option><option>Travel Coupons</option>
+													</select>
+												  </label>
+											</div>
+											
+										</div>
+									</div>
+								</li>	
+
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>Title</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<input type="text" name="title" placeholder="Enter Title" >
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-md-4 indya-col-lg-3">
+											<label>Description</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<textarea cols="" rows="" name="description" placeholder="Enter Description"></textarea>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-lg-3 indya-col-md-4">
+											<label>Photo</label>
+										</div>
+										<div class="indya-col-lg-9 indya-col-md-8">
+											<input type="file" name="img"  style="position: absolute;width: 100%;height: 100%;opacity: 0;cursor: pointer;z-index: 1;"  />
+											<div  class="post_image" >
+												<span><img src="images/icons/cloud-computing.svg"></span> <span>Upload Image</span>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="submit_btn">
+									<div class="indya-row">
+										<div class="indya-col-md-6"></div>
+										<div class="indya-col-md-6">
+											<input type="submit" name="" value="Submit">
+										</div>
+									</div>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			
+		</div><!--end/col-->
+		<div class="indya-col-md-3">
+			<!-- start follow -->
+			<%- include ('right-media') %>
+			<!-- end follow -->
+		</div>
+	</div><!--end/row-->
+</div>
+<!-- end polls content -->
+
+<script>
+	const DIvs = document.querySelectorAll('.selectDiv');
+function showDiv(DIvs, evt){
+	for(var i =0; i < DIvs.length; i++){
+		//DIvs[i].style.display = evt.value == [i] ? 'block' : 'none';
+		if(evt.value == [i]){
+			DIvs[i].style.display = 'block'	
+		}else{
+			DIvs[i].style.display = 'none'
+		}
+		
+	}
+}
+</script>
+
+
+<%- include ('footer') %>

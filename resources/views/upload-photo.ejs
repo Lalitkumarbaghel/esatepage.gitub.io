@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indya Speak | Account</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<?php include 'header.php';?>
+	<!-- start small slider -->
+		<div class="ringtone_bg_tp">
+			<div class="indya-container">
+				<div class="indya-row">
+					<div class="indya-col-md-12">
+						<h5><span class="rng_tn_anker"><a href="index.php">Home</a></span> <span class="rng_tn_icon"><img src="images/icons/double-left-chevron.svg"></span> Upload Photo</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- end small slider -->
+<!-- start slider -->
+
+<!-- end slider -->
+<!-- start middle content -->
+<div class="indya-container indya_sec_p">
+	<div class="indya-row">
+		<!-- contnt -->
+		<div class="indya-col-md-9">
+		<div class="loginform pages_post">
+						<form>
+
+							<ul>
+								
+								<li>
+									<div class="indya-row">
+										<div class="indya-col-lg-6 indya-col-md-6">
+											<label style="text-align: left;padding-bottom: 14px;padding-left: 6px;">Upload Profile Picture</label>
+											<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)" />
+											<a onclick="popRightAway()" class="post_image" href="javascript:void(0)">
+												<span><img src="images/icons/cloud-computing.svg"></span> <span>Upload Image</span>
+											</a>
+										</div>
+										<div class="indya-col-lg-6 indya-col-md-6">
+											
+										</div>
+									</div>
+								</li>
+								<li class="submit_btn">
+									<div class="indya-row">
+										<div class="indya-col-md-5">
+											<input type="submit" name="" value="Upload" style="margin-top: 35px;">
+										</div>
+										<div class="indya-col-md-7">
+											
+										</div>
+									</div>
+								</li>
+							</ul>
+						</form>
+					</div>
+		</div>
+		<!-- contnt -->
+		<!-- right menu -->
+		<div class="indya-col-md-3">
+			<!-- start follow -->
+				<?php include 'usefull-links.php';?>
+				<?php include 'right-media.php';?>
+				<!-- end follow -->
+		</div>
+		<!-- right menu -->
+	</div>
+</div>
+<!-- end middle content -->
+<script type="text/javascript">
+	popFileSelector = function() {
+    var el = document.getElementById("fileElem");
+    if (el) {
+        el.click();  
+    }
+};
+
+window.popRightAway = function() {
+    popFileSelector();
+};
+
+</script>
+<?php include 'footer.php';?>
